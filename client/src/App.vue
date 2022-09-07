@@ -1,20 +1,13 @@
 <script lang="ts" setup>
-import axios from 'axios'
-import { onMounted } from 'vue'
-
-onMounted(async (): Promise<void> => {
-  const response = await axios({
-    url: '/api/tutor_router_list',
-    method: 'POST',
-    data: { uid: 2 },
-  })
-
-  console.log(response)
-})
+import BaseHeader from './components/BaseHeader.vue'
+import BaseFooter from './components/BaseFooter.vue'
+import BaseSideBar from './components/BaseSideBar.vue'
+import BasePage from './components/BasePage.vue'
 </script>
 
 <template>
-  <h1>Hello</h1>
+  <BaseHeader />
+  <BaseFooter />
+  <BaseSideBar />
+  <BasePage />
 </template>
-
-<style scoped></style>

@@ -40,7 +40,7 @@ app.post('/tutor_router_list', (request: Request, response: Response): void => {
     tutorInfo.auth.includes(route.id)
   )
 
-  sendResposne(authRouteList)
+  sendResposne(authRouteList, 'Succeed.')
 })
 
 app.listen(PORT, () => {
