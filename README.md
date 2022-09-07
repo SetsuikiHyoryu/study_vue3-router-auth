@@ -13,6 +13,8 @@
 
 ### 配置 src alias
 
+#### vite.config.ts
+
 ```typescript
 // client\vite.config.ts
 
@@ -28,6 +30,22 @@ export default defineConfig({
     alias: { '@': resolve(__dirname, 'src') },
   },
 })
+```
+
+#### tsconfig.ts
+
+```typescript
+// client\tsconfig.json
+
+{
+  "compilerOptions": {
+    // ...
+    "baseUrl": ".",
+    "paths": { "@/*": ["./src/*"] }
+  },
+
+  // ...
+}
 ```
 
 ### 配置代理（处理开发时的跨域）
